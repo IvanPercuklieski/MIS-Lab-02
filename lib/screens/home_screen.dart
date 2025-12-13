@@ -4,6 +4,7 @@ import '../services/api_service.dart';
 import '../widgets/category_card.dart';
 import 'meals_screen.dart';
 import 'meal_detail_screen.dart';
+import 'favorites_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -69,6 +70,16 @@ class _HomeScreenState extends State<HomeScreen> {
             icon: const Icon(Icons.shuffle),
             onPressed: _navigateToRandomMeal,
             tooltip: 'Random Recipe',
+          ),
+          IconButton(
+            icon: const Icon(Icons.favorite),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const FavoritesScreen()),
+              );
+            },
+            tooltip: 'Favorites',
           ),
         ],
       ),

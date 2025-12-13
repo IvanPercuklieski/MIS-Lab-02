@@ -1,4 +1,4 @@
-package com.example.lab2
+package com.ivanp.lab2
 
 import io.flutter.embedding.android.FlutterActivity
 
